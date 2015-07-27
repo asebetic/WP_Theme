@@ -1,0 +1,282 @@
+/*
+Theme name: WPProject1
+Author: Ana
+Version: 1.0
+*/
+
+* {
+	margin: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #333;
+}
+
+a:link,
+a:visited {
+	color: #006ec3;
+}
+
+h1, h2, h5 {
+	font-family: 'Poiret One', cursive;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h1 a, h2 a {
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+/* General Layout */ 
+
+.container {
+	max-width: 1870px;
+	margin: 0 auto;
+}
+
+/* Index Home page */
+
+.post {
+	padding: 1% 5%;
+	text-align: justify;
+	width: 75%;
+	display: inline-block;
+	margin: 3% 1% 0 1%;
+	float: left;
+
+}
+.post h2 {
+	padding-bottom: 1%;
+}
+
+.btn-contact {
+	background-color: orange;
+	padding: 10px 5px;
+	margin: 10px 0;
+	text-align: center;
+}
+.btn-contact a {
+	font-size: 1.5em;
+	color: white;
+	text-decoration: none;
+}
+.btn-contact a:hover {
+	color: #eee;
+	text-decoration: underline;
+}
+
+/* Header */
+
+.site-header {
+	background-color: #1f87e0;
+	padding: 20px 0 20px 400px;
+	text-align: center;
+	height: 80px;
+}
+.logo {
+	width: 30%;
+	display: inline-block;
+}
+.logo a {
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+
+.site-nav {
+	display: inline-block;
+	float: right;
+	width: 70%;
+}
+.site-nav ul {
+	text-transform: uppercase;
+	font-family: 'Poiret One';
+	font-weight: 800;
+}
+.site-nav ul:before, .site-nav ul:after {
+	content: "";
+	display: table;
+}
+.site-nav ul:after {
+	clear: both;
+}
+.site-nav ul {
+	*zoom: 1;
+}
+.site-nav ul li {
+	list-style: none;
+	float: left;
+	text-align: center;
+	color: #fff;
+}
+.site-nav ul li a:link,
+.site-nav ul li a:visited {
+	display: block;
+	padding: 10px 20px;
+	border-bottom: none;
+	text-decoration: none;
+	color: #fff;
+}
+.site-nav ul li a:hover{
+	background-color: #123a5c;
+}
+
+.site-nav ul li.current-menu-item a:link,
+.site-nav ul li.current-menu-item a:visited {
+	background-color: #123a5c;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+/* Footer */
+
+.site-footer {
+	height: 60px;
+	background-color: #1f87e0;
+	padding: 20px 45%;
+	color: #fff;
+	overflow: hidden;
+}
+
+/* Page Layout */
+
+article.page h2 {
+	font-size: 300%;
+}
+
+/* Video Page */
+
+.video {
+	width: 50%;
+	float: left;
+}
+.side-column {
+	width: 15%;
+	display: inline-block;
+	margin: 2% 0;
+	padding: 1%;
+}
+.side-column .widget-item {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+h2.widget-title {
+	margin-bottom: 10px;
+	color: #282828;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: left;
+	text-shadow:2px 2px 2px black;
+}
+.widget-item ul {
+	padding: 0;
+	list-style: none;
+}
+.widget-item ul li:before {
+		content: "\2023 \0020";
+}
+.widget-item ul li {
+	padding: 4px 0;
+	font-size: 1.2em;
+	border-bottom: 1px solid #DDD;
+}
+.widget-item ul li a {
+	color: #006ec3;
+	text-decoration: none;
+}
+.widget-item ul li a:hover {
+	color: #006ec3;
+	text-decoration: underline;
+}
+
+/* Page Novosti - post page */
+
+.postpage {
+	width: 70%;
+	padding: 2% 0;
+	padding-right: 2%;
+	margin-left: 5%;
+	text-align: justify;
+	display: inline-block;
+	float: left;
+	border-bottom: 1px solid #ddd;
+}
+.postpage:last-of-type {
+	border: none;
+}
+.postpage p {
+	padding: 0;
+}
+.postpage h2 {
+	padding-bottom: 10px;
+	text-shadow: none;
+	text-align: left;
+}
+
+/* Image Styles */ 
+img {
+	padding: 1% 0;
+}
+.has-thumbnail {
+	position: relative;
+	padding-left: 200px;
+}
+.post-thumbnail {
+	position: absolute;
+	left: 0;
+}
+
+/* Post Format Gallery Styles */
+
+article.post-gallery {
+	background-color: #222;
+	color: #fff;
+	padding: 20px;
+}
+article.post-gallery h2 {
+	text-align: center;
+}
+
+/* Home columns */
+.column {
+	background-color: #ddd;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+.post-1, .post-2 {
+	display: inline-block;
+	width: 50%;
+	height: 240px;
+	float: left;
+	padding: 10px 20px;
+	margin-top: 15px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.square-thumbnail {
+	float: left;
+	padding: 40px 10px 10px 0;
+}
+.news-link {
+	font-size: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+.news-link a {
+	text-decoration: none;
+}
