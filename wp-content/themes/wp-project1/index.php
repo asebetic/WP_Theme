@@ -2,24 +2,27 @@
 
 <?php
 
-get_header();
+get_header(); ?>
 
-if (have_posts()) :
-	while (have_posts()) : the_post();
+<div class="content">
 
-	get_template_part('content', get_post_format());
+	<?php if (have_posts()) :
+		while (have_posts()) : the_post();
 		
-	endwhile;
+		get_template_part('content', get_post_format());
+			
+		endwhile;
 
-	else :
-		echo '<p>No content found</p>';
+		else :
+			echo '<p>No content found</p>';
 
-	endif; ?>
+		endif; ?>
+
+</div>
 
 <?php get_sidebar(); ?>
 
-<?php get_footer();
+<?php get_footer(); ?>
 
-?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<article class="postpage <?php if ( has_post_thumbnail() ) { ?>has-thumbnail <?php } ?>">
+<article class="post <?php if ( has_post_thumbnail() ) { ?>has-thumbnail <?php } ?>">
 		
 		<!-- post-thumbnail -->
 		<div class="post-thumbnail">
@@ -6,9 +6,7 @@
 		</div><!-- /post-thumbnail -->
 
 			<h2>
-				<a href="<?php the_permalink(); ?>">
 					<?php the_title(); ?>
-				</a>
 			</h2>
 
 			<p>

@@ -5,10 +5,11 @@
 
 get_header();
 
+
 if (have_posts()) :
 	while (have_posts()) : the_post();
 
-	get_template_part('content', get_post_format());
+	get_template_part('content-page', get_post_format());
 
 	endwhile;
 
@@ -17,11 +18,11 @@ if (have_posts()) :
 
 	endif; ?>
 
-	<div class="postpage column">
+	<div class="post column">
 		<div class="news-link">
-			<a href="<?php echo get_category_link(5); ?>">
+			<h3><a href="<?php echo get_category_link(5); ?>">
 				Novosti
-			</a>
+			</h3></a>
 		</div>
 
 		<?php // news posts loop begins here

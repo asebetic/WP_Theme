@@ -1,11 +1,15 @@
+<?php /* Template Name: Contact Page
+*/ ?>
+
 <?php
 
 get_header();
 
+
 if (have_posts()) :
 	while (have_posts()) : the_post();
 
-	get_template_part('content-page', get_post_format());
+	get_template_part('content-contact', get_post_format());
 
 	endwhile;
 
@@ -13,7 +17,6 @@ if (have_posts()) :
 		echo '<p>No content found</p>';
 
 	endif; ?>
-<?php get_sidebar(); ?>
 
 <?php get_footer();
 

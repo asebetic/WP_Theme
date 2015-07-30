@@ -1,4 +1,4 @@
-<article class="postpage <?php if ( has_post_thumbnail() ) { ?>has-thumbnail <?php } ?>">
+<article class="contact-page <?php if ( has_post_thumbnail() ) { ?>has-thumbnail <?php } ?>">
 		
 		<!-- post-thumbnail -->
 		<div class="post-thumbnail">
