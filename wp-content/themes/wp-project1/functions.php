@@ -46,7 +46,7 @@ add_action('after_setup_theme', 'wpProject1_setup');
 
 // Excerpt lenght
 function custom_excerpt_length( $length ) {
-	return 30;
+	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

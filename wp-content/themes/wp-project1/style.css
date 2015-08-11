@@ -54,6 +54,7 @@ p {
 	text-align: center;
 	height: 80px;
 	box-shadow:inset 0 -15px 15px -16px #2d2d2d;
+	z-index: 1000;
 }
 .logo {
 	width: 30%;
@@ -99,6 +100,83 @@ p {
 	background-color: #fff;
 	color: #0f692d;
     box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+}
+
+/* Mobile Nav*/
+.navbar {
+    padding: 1% 0;
+    background-color: #666;
+    display: none;
+}
+.navbar.show {
+	display: block;
+}
+.navbar ul {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 0;
+    font-family: 'Poiret One';
+    font-weight: 800;
+}
+.navbar ul li {
+    list-style: none;
+    padding: 1% 0;
+}
+.navbar ul li:hover {
+	background-color: #555;
+}
+.navbar ul li.current-menu-item a:link,
+.navbar ul li.current-menu-item a:visited {
+	color: #f1f1f1;
+}
+.menu-toggle {
+	display: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: none;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.slider.hide {
+	display: none;
 }
 
 /* Footer */
@@ -204,6 +282,25 @@ h2.widget-title {
 	float: left;
 	border: 2px solid #ddd;
 }
+.more-link {
+	display: block;
+	width: 70px;
+	padding: 5px 10px;
+	color: #fff!important;
+	background: #e18e18;
+    background: linear-gradient(#e18e18,#ffbf63,#e18e18);
+	border: 2px solid #ac7a33;
+	border-radius: 10px;
+	margin: 10px 0;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.more-link:hover {
+	border: 2px solid #8a6024;
+}
 
 /* Image Styles */ 
 .postpage img {
@@ -212,7 +309,6 @@ h2.widget-title {
 .has-thumbnail {
 	position: relative;
 	padding-left: 200px;
-	height: 210px;
 }
 .post-thumbnail {
 	position: absolute;
@@ -238,11 +334,10 @@ article.post-gallery h2 {
 .post-1, .post-2 {
 	display: inline-block;
 	width: 50%;
-	height: 200px;
+	height: auto;
 	float: left;
 	padding: 10px 20px;
 	margin-top: 15px;
-	overflow: hidden;
 }
 .post-1 {
 	padding-right: 80px;
@@ -308,6 +403,7 @@ article.post-gallery h2 {
 	}
 	.logo {
 		width: 40%;
+		display: inline-block;
 	}
 	.site-nav {
 		width: 60%;
@@ -320,15 +416,11 @@ article.post-gallery h2 {
 		margin: 2% 4%;
 	}
 	.post-1, .post-2 {
-		height: 240px;
 		width: 100%;
 		display: block;
 	}
 	.post-1 {
 		padding-right: 0;
-	}
-	.postpage {
-		overflow: hidden;
 	}
 	.banner-image {
 		float: none;
@@ -337,25 +429,23 @@ article.post-gallery h2 {
 }
 @media only screen and (max-width: 860px){
 	.site-header {
-		height: 250px;
 		padding-left: 0;
 	}
 	.logo {
-		width: 100%;
+		width: 80%;
+		float: left;
 	}
 	.site-nav {
-		width: 100%;
+		display: none;
+	}
+	.menu-toggle {
+		width: 45px;
+		height: 45px;
+		display: inline-block;
+		padding-top: 20px;
+	}
+	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
 		display: block;
-		float: none;
-	}
-	.site-nav ul {
-		padding-left: 0;
-		margin-top: 1%;
-	}
-	.site-nav ul li {
-		width: 100%;
-		float: none;
-		font-size: 1.3em;
 	}
 	.side-column {
 		display: none;
@@ -371,10 +461,19 @@ article.post-gallery h2 {
 }
 
 @media only screen and (max-width: 479px) {
-	.slider {
+	.postpage img {
 		display: none;
 	}
-	.site-header {
-		margin-bottom: 20px;
+	.has-thumbnail {
+		padding-left: 1%;
+	}
+	.more-link {
+		margin: 10px auto;
+	}
+	.square-thumbnail {
+		display: none;
+	}
+	.slider {
+	margin-bottom: 20px;
 	}
 }
