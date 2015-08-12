@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
-    <meta name="google-site-verification" content="Zd9xlaVoQyZaCoAuDGdJFQnMhYTtVtTMQTGWELnnLkU" />
+    <meta name="google-site-verification" content="Zd9xlaVoQyZaCoAuDGdJFQnMhYTtVtTMQTGWELnnLkU"/>
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
@@ -27,25 +27,24 @@
             <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
         </div>
 
-        <a id="nav-toggle" href="#"><div class="menu-toggle"><span></span></div></a>
-    
+        <a id="nav-toggle" href="#">
+            <div class="menu-toggle"><span></span></div>
+        </a>
+
         <nav class="site-nav">
-            <?php wp_nav_menu($args); ?>
+            <?php
+            $args = array(
+                'theme_location' => 'primary'
+            );
+
+            wp_nav_menu($args);
+            ?>
 
         </nav>
     </header>
     <!-- /site-header -->
     <nav class="navbar hidden">
-        <?php
-
-        $args = array(
-            'theme_location' => 'primary'
-        );
-
-        ?>
-
         <?php wp_nav_menu($args); ?>
-
     </nav>
     <div class="slider">
         <?php

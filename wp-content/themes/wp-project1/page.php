@@ -3,18 +3,16 @@
 get_header();
 
 if (have_posts()) :
-	while (have_posts()) : the_post();
+    while (have_posts()) : the_post();
 
-	get_template_part('content-page', get_post_format());
+        get_template_part('content-page', get_post_format());
 
-	endwhile;
+    endwhile;
 
-	else :
-		echo '<p>No content found</p>';
+else :
+    echo '<p>No content found</p>';
+endif;
 
-	endif; ?>
-<?php get_sidebar(); ?>
+get_sidebar();
 
-<?php get_footer();
-
-?>
+get_footer();
