@@ -35,7 +35,7 @@ endif; ?>
                         </div><!-- /post-thumbnail -->
                     <?php endif; ?>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php the_content('Više...'); ?>
+                    <?php the_content('Vi&Scaron;e...'); ?>
                 </div>
             <?php endwhile;
         endif;

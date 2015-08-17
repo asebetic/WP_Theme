@@ -332,22 +332,23 @@ h2.widget-title {
 .more-link {
     display: block;
     width: 70px;
+    height: 36px;
     padding: 5px 10px;
-    color: #fff !important;
-    background: #e18e18;
-    background: linear-gradient(#e18e18, #ffbf63, #e18e18);
-    border: 2px solid #ac7a33;
-    border-radius: 10px;
     margin: 10px 0;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     box-shadow: 1px 1px 5px #ccc;
+    color: #000 !important;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 3px;
 }
 
 .more-link:hover {
-    border: 2px solid #8a6024;
+    color: #fff !important;
+    background-color: #333;
 }
 
 /* Image Styles */
@@ -454,12 +455,12 @@ article.post-gallery h2 {
     }
 
     .logo {
-        width: 40%;
+        width: 35%;
         display: inline-block;
     }
 
     .site-nav {
-        width: 60%;
+        width: 65%;
     }
 
     .side-column {
@@ -523,6 +524,9 @@ article.post-gallery h2 {
 
     .post {
         box-shadow: none;
+    }
+    .more-link {
+        margin-top: 45px;
     }
 }
 
